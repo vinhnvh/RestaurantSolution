@@ -13,32 +13,27 @@ namespace Restaurant.UI
 {
     public partial class TableControl : UserControl
     {
-        // 1. Kho chứa dữ liệu
         private int _formIndex;
 
-        // 2. Cửa sổ giao tiếp với bảng Properties
         [Category("Cấu Hình Bàn")]
-        [Description("Số thứ tự để mở Form tương ứng (1-6)")]
+        [Description("Nhập số thứ tự từ 1-6")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public int FormIndex
         {
             get { return _formIndex; }
             set
             {
                 _formIndex = value;
-                // Khi bạn gõ số ở ngoài, chữ trên nút sẽ đổi theo ngay
                 if (btnTable != null)
                 {
                     btnTable.Text = "Bàn số " + _formIndex;
                 }
             }
         }
-
         public TableControl()
         {
             InitializeComponent();
         }
-
-        // 3. Xử lý khi click vào nút
         private void btnTable_Click(object sender, EventArgs e)
         {
             switch (_formIndex)
