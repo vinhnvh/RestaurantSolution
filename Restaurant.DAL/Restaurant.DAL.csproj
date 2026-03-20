@@ -4,6 +4,10 @@
     <ProjectReference Include="..\Restaurant.DTO\Restaurant.DTO.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DAL\" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
